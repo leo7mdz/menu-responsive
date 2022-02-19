@@ -1,0 +1,125 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  height: 200vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  /*  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1); */
+}
+.header .logo {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.header .logo-personalizado {
+  color: cyan;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 99%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.2s linear;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+.menu__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+}
+
+.icon-menu {
+  margin-right: 0.4rem;
+}
+
+.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@keyframes fadeIn {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+}
+.search-form {
+  position: absolute;
+  display: none;
+  padding: 1rem;
+  width: 60%;
+  top: 115%;
+  left: 50%;
+  transform: translateX(-40%);
+  box-shadow: 0.1rem 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s linear;
+}
+.search-form.search-active {
+  display: flex;
+}
+.search-form__input {
+  background-color: #eeeeee;
+  padding: 0.4rem;
+  width: 100%;
+  border-radius: 0.4rem;
+  border: none;
+  outline: transparent;
+}
+.search-form__label {
+  font-size: 1.4rem;
+  margin-left: 0.6rem;
+  padding-top: 0.2rem;
+  cursor: pointer;
+}
+.search-form:hover {
+  color: cyan;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    position: inherit;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    flex-direction: row;
+    border-top: transparent;
+    border-bottom: transparent;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+
+  .icon:first-child {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
