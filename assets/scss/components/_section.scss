@@ -1,0 +1,53 @@
+.section-background {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/programing-img.jpg);
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*   position: absolute;
+  top: 0;
+  left: 0; */
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  .paragraph {
+    font-size: 2.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    transition: font-size 0.2s linear;
+    border-right: 4px solid;
+    white-space: nowrap;
+    width: 17ch;
+    display: block;
+
+    animation: typing 2.7s steps(18), blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .paragraph {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.section-description {
+  width: 100%;
+  height: 100vh;
+}

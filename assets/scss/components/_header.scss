@@ -3,11 +3,12 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4rem;
+  height: 2.7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+
   /*  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1); */
 
   .logo {
@@ -22,6 +23,7 @@
 
 .menu {
   position: absolute;
+
   left: 0;
   right: 0;
   top: 99%;
@@ -31,13 +33,14 @@
   margin: 0;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transition: clip-path 0.2s linear;
-  border-top: 2px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  /*    border-top: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2); */
+  background-color: rgba(199, 194, 194, 0.8);
 
   &__link {
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
     color: black;
     display: block;
     padding: 1rem;
@@ -102,6 +105,7 @@
     flex-direction: row;
     border-top: transparent;
     border-bottom: transparent;
+    background-color: transparent;
   }
 
   .icons .icon-menu {

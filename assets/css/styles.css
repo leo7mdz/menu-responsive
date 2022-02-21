@@ -11,7 +11,6 @@ html {
 
 body {
   margin: 0;
-  height: 200vh;
 }
 
 .header {
@@ -19,7 +18,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 4rem;
+  height: 2.7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,13 +44,14 @@ body {
   margin: 0;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transition: clip-path 0.2s linear;
-  border-top: 2px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  /*    border-top: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2); */
+  background-color: rgba(199, 194, 194, 0.8);
 }
 .menu__link {
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   color: black;
   display: block;
   padding: 1rem;
@@ -111,11 +111,60 @@ body {
     flex-direction: row;
     border-top: transparent;
     border-bottom: transparent;
+    background-color: transparent;
   }
 
   .icons .icon-menu {
     display: none;
   }
+}
+.section-background {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/programing-img.jpg);
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*   position: absolute;
+  top: 0;
+  left: 0; */
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.section-background .paragraph {
+  font-size: 2.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  transition: font-size 0.2s linear;
+  border-right: 4px solid;
+  white-space: nowrap;
+  width: 17ch;
+  display: block;
+  animation: typing 2.7s steps(18), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .section-background .paragraph {
+    font-size: 3.2rem;
+  }
+}
+
+.section-description {
+  width: 100%;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=styles.css.map */
